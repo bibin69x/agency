@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { projects } from "@/data/projects";
+import Link from "next/link";
 
 
 export default function WorkPage() {
@@ -66,15 +67,15 @@ export default function WorkPage() {
                 </div>
 
                 <a
-                  href="#"
-                  className="mt-8 inline-flex items-center gap-2 text-xs font-medium"
-                >
-                  View project
-                  <ArrowRight
-                    size={14}
-                    className="transition-transform group-hover:translate-x-1"
-                  />
-                </a>
+  href={`/work/${project.slug}`}
+  className="mt-8 inline-flex items-center gap-2 text-xs font-medium"
+>
+  View project
+  <ArrowRight
+    size={14}
+    className="transition-transform group-hover:translate-x-1"
+  />
+</a>
               </div>
             </article>
           ))}
